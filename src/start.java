@@ -9,9 +9,12 @@ public class start {
         window.setLayout(null);
         window.setVisible(true);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        GameFrame snakeGame = new GameFrame();
+        Control windowKeyListener = new Control();
+        window.addKeyListener(windowKeyListener);
+        GameFrame snakeGame = new GameFrame(windowKeyListener);
         snakeGame.setFocusable(true);
         snakeGame.setSize(800,400);
         window.setContentPane(snakeGame);
+        window.setFocusable(true);
     }
 }

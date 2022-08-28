@@ -8,7 +8,6 @@ public class Control extends KeyAdapter {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println(e);
     }
 
     /**
@@ -16,7 +15,10 @@ public class Control extends KeyAdapter {
      */
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println(e);
+        int keyCode = e.getKeyCode();
+        if(keyCode == KeyEvent.VK_DOWN) {
+            System.out.println("Do something here");
+        }
     }
 
     /**
@@ -24,6 +26,5 @@ public class Control extends KeyAdapter {
      */
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println(e);
     }
 }
